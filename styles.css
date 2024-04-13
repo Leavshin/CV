@@ -1,0 +1,313 @@
+@font-face {
+    font-family: 'Railey'; /* Remplacez 'NomDeLaPolice' par le nom que vous souhaitez donner à votre police */
+    src: url('/Font/Railey-PersonalUse.ttf') format('truetype'); /* Ajoutez le chemin vers le fichier de police */
+    /* Vous pouvez également ajouter d'autres formats de fichier de police (comme 'woff', 'woff2', etc.) pour une meilleure compatibilité avec les navigateurs */
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-section,
+.right-section {
+    flex: 1;
+    text-align: center;
+}
+
+.left-section p {
+    margin-top: 10px; /* Ajuster la marge entre le titre et le sous-titre */
+}
+
+.right-section {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Aligner à droite */
+    align-items: center; /* Centrer verticalement */
+}
+
+.center-section {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+    /*margin: 0 auto;  Appliquer des marges automatiques pour centrer horizontalement */
+}
+
+h1 {
+    font-size: 3em;
+    font-family: 'Railey', sans-serif; /* Utilisez le nom de la police défini dans @font-face */
+    margin: 0;
+}
+
+.profile-info img {
+    width: 120px; /* Réduire la largeur de la photo de profil */
+    height: 120px; /* Réduire la hauteur de la photo de profil */
+    border-radius: 50%; /* Rendre la photo de profil ronde */
+    border: 2px solid #fff;
+    transition: transform 0.3s ease;
+}
+
+.profile-info img:hover {
+    transform: scale(0.9);
+}
+
+/* Ajouté pour le texte sous la photo de profil */
+.profile-info p {
+    margin-top: 20px; /* Ajuster la marge supérieure du texte */
+    font-size: 14px;
+    color: #666;
+}
+
+.contact-info-logo {
+    display: flex;
+    align-items: center;
+}
+
+.contact-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 10px; /* Réduire la marge entre les infos de contact et les logos */
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column; /* Afficher les logos en colonne */
+    align-items: center; /* Centrer horizontalement */
+    margin-right: 15px; /* Ajouter une marge à droite */
+    margin-left: 15px;
+}
+
+.social-icons a {
+    margin-bottom: 5px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+.main-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Espace équitablement les sections */
+    padding: 20px;
+}
+
+section {
+    width: calc(30% - 20px);
+    height: max-content;
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px; /* Ajout de marge en bas */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: block; /* Masquer initialement les sections */
+    flex-direction: column; /* Permettre le passage à la ligne */
+    align-items: flex-start; /* Ajuster la hauteur en fonction du contenu */
+}
+
+.formations-loisirs-wrapper {
+    order: 3;
+    width: calc(30% - 20px); /* Ajustez la largeur pour inclure les deux sections côte à côte */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#formations,
+#loisirs {
+    width: 100%; /* Prend toute la largeur à l'intérieur du wrapper */
+}
+
+h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    cursor: pointer;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+    transition: opacity 0.5s ease;
+}
+
+.hovered {
+    background-color: #f0f0f0;
+}
+
+.z-section {
+    animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#experiences .experience,
+#formations .formation {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Tailles des flexbox pour les différentes sections */
+#experiences {
+    order: 1;
+}
+
+#competences {
+    order: 2;
+}
+
+#loisirs .loisirs-content {
+    display: flex;
+    flex-direction: column;
+}
+
+#loisirs .loisirs-content p {
+    margin: 5px 0;
+}
+
+#savoirs-être {
+    height: auto; /* Utiliser la hauteur automatique pour s'adapter au contenu */
+    order: 5;
+    width: 100%; /* Utiliser toute la largeur */
+    display: flex;
+    align-items: center; /* Aligner verticalement */
+    justify-content: space-evenly;
+    margin-bottom: 10px; /* Réduire la marge en bas */
+    padding-left: 20px; /* Ajouter un peu de marge à gauche */
+    padding-right: 20px; /* Ajouter un peu de marge à droite */
+}
+
+#savoirs-être .section-title {
+    margin: 0;
+    margin-right: 60px; /* Réduire la marge à droite */
+}
+
+#savoirs-être .savoirs-content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 0;
+}
+
+
+@media screen and (max-width: 768px) {
+    header {
+        width: fit-content-moz-fit-content;        
+    }
+
+    .main-section {
+        flex-direction: column; /* Passer à une disposition en colonne */
+    }
+
+    #experiences,
+    #competences,
+    #savoirs-être {
+        width: auto; /* Sur les écrans plus petits, étendre la largeur de ces sections pour qu'elles occupent toute la largeur */
+    }
+
+
+    #savoirs-être .savoirs-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .formations-loisirs-wrapper {
+        width: 100%;
+    }
+
+    #savoirs-être .savoirs-content li {
+        flex-basis: calc(50% - 20px); /* Sur un écran moyen, chaque élément occupe la moitié de la largeur de son conteneur moins la marge */
+    }
+    
+    #savoirs-être .savoirs-content li:last-child {
+        margin-right: 0; /* Retirer la marge du dernier élément */
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    header {
+        width: auto;
+    } 
+
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .center-section,
+    .right-section {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .right-section {
+        margin-top: 20px; /* Ajoute une marge entre la photo et les infos de contact */
+    }
+
+    .right-section {
+        display: flex;
+        flex-direction: column; /* Afficher les éléments en colonne */
+        align-items: center; /* Centrer horizontalement */
+    }
+
+    .main-section {
+        flex-direction: column; /* Passer à une disposition en colonne */
+    }
+
+    .accordion-content {
+        display: none;
+    }
+      
+
+    #experiences,
+    #competences,
+    #savoirs-être {
+        width: auto; /* Sur les écrans plus petits, étendre la largeur de ces sections pour qu'elles occupent toute la largeur */
+    }
+
+    #savoirs-être .savoirs-content li {
+        flex-basis: calc(100% - 20px); /* Sur un petit écran, chaque élément occupe toute la largeur de son conteneur moins la marge */
+        margin-right: 0; /* Retirer la marge du dernier élément */
+    }
+}    
