@@ -295,11 +295,21 @@ li {
         flex-direction: column; /* Passer à une disposition en colonne */
     }
 
+    /* Ajout des styles pour l'accordéon */
     .accordion-content {
+        display: none; /* Masquer le contenu par défaut */
+    }
+
+    /* Afficher le contenu si l'accordéon est activé */
+    .z-section.accordion-active .accordion-content {
+        display: block;
+    }
+
+    .hidden {
         display: none;
     }
-      
-
+  
+  
     #experiences,
     #competences,
     #savoirs-être {

@@ -69,27 +69,23 @@ window.addEventListener("scroll", function() {
     }
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-    // Vérifiez si la largeur de l'écran est inférieure à 480 pixels
-    if (window.matchMedia("(max-width: 480px)").matches) {
-        let accordionSections = document.querySelectorAll(".z-section");
-
-        accordionSections.forEach(section => {
-            // Ajoutez un écouteur d'événement de clic à chaque section
-            section.addEventListener("click", function() {
-                // Sélectionnez le contenu de l'accordéon associé à la section actuellement cliquée
-                let accordionContent = this.querySelector(".accordion-content");
-
-                // Basculez la classe "active" pour la section actuellement cliquée
-                this.classList.toggle("active");
-
-                // Si le contenu de l'accordéon est déjà ouvert, fermez-le. Sinon, ouvrez-le.
-                if (accordionContent.style.display === "none") {
-                    accordionContent.style.display = "block";
-                } else {
-                    accordionContent.style.display = "none";
-                }
-            });
+// Ajout d'un gestionnaire d'événements pour chaque titre de section
+window.addEventListener("DOMContentLoaded", () => {
+    // Sélection de tous les titres de section
+    let accordionTitles = document.querySelectorAll(".accordion-title");
+    
+    // Boucle à travers chaque titre de section
+    accordionTitles.forEach(title => {
+        // Ajout d'un écouteur d'événements au clic sur chaque titre
+        title.addEventListener("click", function() {
+            // Sélection de la section suivante (le contenu de l'accordéon)
+            let accordionContent = this.nextElementSibling;
+            
+            // Basculement de la classe 'hidden' pour afficher ou masquer le contenu de l'accordéon
+            accordionContent.classList.toggle("hidden");
+            
+            // Basculement de la classe 'accordion-active' pour activer ou désactiver l'accordéon
+            accordionContent.parentElement.classList.toggle("accordion-active");
         });
-    }
+    });
 });
