@@ -18,16 +18,16 @@ function getComputerChoice(){
 }
 
 function convertToWord (letter) {
-  if (letter === "r") return "Rock"; //This is saying if the argument passed to the result message was r, write 'Rock' instead. This is more human readable than 'r'
-  if (letter === "p") return "Paper"; 
-  return "Scissors"; //if it wasnt rock or paper it's gunna be scissors. 
+  if (letter === "r") return "Pierre"; //This is saying if the argument passed to the result message was r, write 'Rock' instead. This is more human readable than 'r'
+  if (letter === "p") return "Papier"; 
+  return "Ciseaux"; //if it wasnt rock or paper it's gunna be scissors. 
 }
 
 function win(user, comp) {
   userScore ++;
   userScore_span.innerHTML = userScore; 
   compScore_span.innerHTML = compScore;
-  result_div.innerHTML = convertToWord(user) + " beats " + convertToWord(comp) + ". You WINNN!!! ✌ ...for now."; // this delivers the details to the dom, converting the resulting letter to a word 
+  result_div.innerHTML = convertToWord(user) + " bat " + convertToWord(comp) + ". Tu as gagné!!! ✌ ... pour l'instant."; // this delivers the details to the dom, converting the resulting letter to a word 
   document.getElementById(user).classList.add('win-glow'); // this grabs which ever div element was clicked in the browser and adds the win-glow class to it
   setTimeout(function(){ document.getElementById(user).classList.remove('win-glow')}, 1000); //This removes the same class after a certain duration as passed
 }
@@ -36,13 +36,13 @@ function lose(user, comp) {
   compScore ++;
   userScore_span.innerHTML = userScore; 
   compScore_span.innerHTML = compScore;
-  result_div.innerHTML = convertToWord(user) + " is vanquished by " + convertToWord(comp) + ". 🤮 Soz, you LOSE."; // this delivers the details to the dom, converting the resulting letter to a word 
+  result_div.innerHTML = convertToWord(user) + " est vaincu par " + convertToWord(comp) + ". 🤮 Tu as perdu !"; // this delivers the details to the dom, converting the resulting letter to a word 
     document.getElementById(user).classList.add('lose-glow');
   setTimeout(function(){ document.getElementById(user).classList.remove('lose-glow')}, 1000);
 }
 
 function draw(user, comp) {
-  result_div.innerHTML = convertToWord(user) + " does nothing to " + convertToWord(comp) + ". They are friends. Everybody loses / go home."; // this delivers the details to the dom, converting the resulting letter to a word 
+  result_div.innerHTML = convertToWord(user) + " ne peut rien contre " + convertToWord(comp) + ". C'est une égalité !"; // this delivers the details to the dom, converting the resulting letter to a word 
     document.getElementById(user).classList.add('draw-glow');
   setTimeout(function(){ document.getElementById(user).classList.remove('draw-glow')}, 1000);
 }
