@@ -1,22 +1,22 @@
 document.addEventListener("DOMContentLoaded", function(event) {
 
     var iconsArray = [
-       [1, 'fa-shopping-cart'],
-       [1, 'fa-shopping-cart'],
-       [2, 'fa-car'],
-       [2, 'fa-car'],
-       [3, 'fa-bomb'],
-       [3, 'fa-bomb'],
-       [4, 'fa-bell'],
-       [4, 'fa-bell'],
-       [5, 'fa-bowling-ball'],
-       [5, 'fa-bowling-ball'],
-       [6, 'fa-cloud'],
-       [6, 'fa-cloud'],
+       [1, 'fa-shopping-cart <i class="fa-solid fa-cart-shopping" style="color: #646464;</i>'],
+       [1, 'fa-shopping-cart <i class="fa-solid fa-cart-shopping" style="color: #646464;</i>'],
+       [2, 'fa-car <i class="fa-solid fa-car" style="color: #fa0000;</i>'],
+       [2, 'fa-car <i class="fa-solid fa-car" style="color: #fa0000;</i>'],
+       [3, 'fa-bomb <i class="fa-solid fa-bomb" style="color: #000000;</i>'],
+       [3, 'fa-bomb <i class="fa-solid fa-bomb" style="color: #000000;</i>'],
+       [4, 'fa-bell <i class="fa-solid fa-bell" style="color: #FFD43B;</i>'],
+       [4, 'fa-bell <i class="fa-solid fa-bell" style="color: #FFD43B;</i>'],
+       [5, 'fa-bowling-ball <i class="fa-solid fa-bowling-ball" style="color: #1c821c;</i>'],
+       [5, 'fa-bowling-ball <i class="fa-solid fa-bowling-ball" style="color: #1c821c;</i>'],
+       [6, 'fa-cloud <i class="fa-solid fa-cloud" style="color: #74C0FC;</i>'],
+       [6, 'fa-cloud <i class="fa-solid fa-cloud" style="color: #74C0FC;</i>'],
        [7, 'fa-camera'],
        [7, 'fa-camera'],
-       [8, 'fa-key'],
-       [8, 'fa-key']
+       [8, 'fa-key <i class="fa-solid fa-key" style="color: #B197FC;</i>'],
+       [8, 'fa-key <i class="fa-solid fa-key" style="color: #B197FC;</i>'],
     ];
  
     // VARIOUS VARIABLES

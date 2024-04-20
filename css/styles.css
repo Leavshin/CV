@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Railey'; /* Remplacez 'NomDeLaPolice' par le nom que vous souhaitez donner à votre police */
-    src: url('/Font/Railey-PersonalUse.ttf') format('truetype'); /* Ajoutez le chemin vers le fichier de police */
+    src: url('../Font/Railey-PersonalUse.ttf') format('truetype'); /* Ajoutez le chemin vers le fichier de police */
     /* Vous pouvez également ajouter d'autres formats de fichier de police (comme 'woff', 'woff2', etc.) pour une meilleure compatibilité avec les navigateurs */
 }
 
@@ -52,9 +52,14 @@ header {
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 2.5em;
     font-family: 'Railey', sans-serif; /* Utilisez le nom de la police défini dans @font-face */
     margin: 0;
+}
+
+.titre {
+    font-size: 1.4em;
+    font-family: 'Railey', sans-serif;
 }
 
 .profile-info img {
@@ -91,6 +96,12 @@ h1 {
 
 .contact-info p {
     margin: 5px 0;
+}
+
+.contact-info a
+{
+    color: white;
+    text-decoration:none;
 }
 
 .social-icons {
@@ -153,7 +164,7 @@ ul {
 }
 
 li {
-    cursor: pointer;
+    /* cursor: pointer; */
     padding: 10px 0;
     border-bottom: 1px solid #ccc;
     transition: opacity 0.5s ease;
