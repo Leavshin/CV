@@ -1,5 +1,33 @@
 // JavaScript pour rendre le CV dynamique
 
+// Récupérez l'élément de l'image de profil
+var profileImage = document.querySelector('.profile-image');
+
+// Récupérez l'élément de la modal
+var modal = document.getElementById('myModal');
+
+// Récupérez l'élément pour fermer la modal
+var span = document.getElementsByClassName('close')[0];
+
+// Lorsque l'utilisateur clique sur l'image, affichez la modal avec l'image en plein écran
+profileImage.onclick = function() {
+    modal.style.display = 'block';
+    var modalImg = document.getElementById('img01');
+    modalImg.src = this.src;
+}
+
+// Lorsque l'utilisateur clique sur <span> (x), fermez la modal
+span.onclick = function() {
+    modal.style.display = 'none';
+}
+
+// Lorsque l'utilisateur clique n'importe où en dehors de la modal, fermez-la
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
+}
+
 // Fonction pour afficher les sections avec une transition en fondu enchaîné
 document.addEventListener("DOMContentLoaded", function() {
     let sections = document.querySelectorAll(".z-section");

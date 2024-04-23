@@ -8,6 +8,21 @@ body {
   font-family: "Flavors", cursive;
 }
 
+/* Styles pour le bouton retour */
+.btn-retour {
+  position: absolute;
+  top: 20px; /* Ajustez la position verticale selon vos besoins */
+  left: 20px; /* Ajustez la position horizontale selon vos besoins */
+  padding: 10px 20px;
+  /* background-color: #fff; */
+  color: #000;
+  /* border: 1px solid #000; */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
 header h1 {
   color: white;
   text-align: center;
